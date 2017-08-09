@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_story"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shapp.www.interactivestory.ui.StoryActivity">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice2Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@android:color/white"
+        tools:text="@string/page0_choice2"
+        android:textSize="16sp"
+        android:textColor="#3A8AEC"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:id="@+id/choice1Button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/choice2Button"
+        android:layout_width="0dp"
+        tools:text="@string/page0_choice1"
+        android:textSize="16sp"
+        android:textColor="#3A8AEC"
+        android:background="@android:color/white"/>
+
+    <ScrollView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/choice1Button"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/page0"
+                android:id="@+id/storyImageView"
+                tools:layout_constraintTop_creator="1"
+                tools:layout_constraintLeft_creator="1"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/story_image_description"/>
+
+            <TextView
+                tools:text="@string/page0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/storyTextView"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
